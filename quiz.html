@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <title>WYQUIZ</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="loader"></div>
+        <div id="quiz" class="justify-center flex-column hidden">
+            <a href="/" id="giveUp" class="btn" title="You will loose your progress">Give up</a>
+            <div id="hud" class="mb-4">
+                <div id="hudItem">
+                    <p id="progressText" class="hud-prefix mb-1">
+                        Question
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressInnerBar"></div>
+                    </div>
+                </div>
+
+                <div id="hudScoreItem">
+                    <p class="hud-prefix mb-1">
+                        Score
+                    </p>
+                    <h1 id="score" class="hud-main-text">
+                        0
+                    </h1>
+                </div>
+            </div>
+
+            <h2 id="question" class="mb-2">Welcome</h2>
+            <div class="card">
+                <p class="card-prefix">A</p>
+                <p class="card-text choice" data-card="1"></p>
+            </div>
+            <div class="card">
+                <p class="card-prefix">B</p>
+                <p class="card-text choice" data-card="2"></p>
+            </div>
+            <div class="card">
+                <p class="card-prefix">C</p>
+                <p class="card-text choice" data-card="3"></p>
+            </div>
+            <div class="card">
+                <p class="card-prefix">D</p>
+                <p class="card-text choice" data-card="4"></p>
+            </div>
+        </div>
+    </div>
+
+<script src="js/quiz.js"></script>
+</body>
+</html>

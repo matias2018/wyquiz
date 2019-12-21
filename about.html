@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>WYQUIZ</title>
+</head>
+<body>
+    <details>
+        <summary>Special thanks and acknowledgements</summary>
+        <b>Cascais, 21/12/19</b> 
+        <br>
+        <p>Big thansks to <b>Bruno Crociquia</b> and <b>Rui Rosa</b> for giving me the chance of prooving myself.</p>
+        <br>
+        <p>This app is based on the great work of <quote>Gwen Faraday</quote>, James Quick and it uses the 
+        <a href="https://opentdb.com/" target="_blank">OPEN TRIVIA</a> from Pixel Tail Games.
+        <br>
+        It's pure JavaScript mostly using ES6 syntax like arrow functions and variable declarations.
+        <br>
+        A special thank you to Brendan Eich for developing such a cool language (JavaScript), although with kind of a stupid name.</p>
+    </details>
+    <div class="wrapper">
+        <div id="home" class="flex-center flex-column">
+            <a href="/"><h1 id="mainTitle" class="mb-4">WYQUIZ</h1></a>
+            <p class="about mb-4">
+                This is a simple quiz I made to present to WY Group front-end engineering team leader Rui Rosa and
+                WY Group CTO Bruno Crociquia. <br>
+                Therefore the name WYQUIZ.
+            </p>
+            
+            <button id="woohoo" class="btn" onclick="useTemplate()">Click to like</button>
+            <div id="yourThoughts"></div>
+            <template id="myTemplate" class="justify-center flex-column">
+                <h1 class="mb-4">\0/</h1>
+            </template>
+            <h3 id="newIt" class="hidden"></h3>
+        </div>
+    </div>
+    
+    <script>
+        function useTemplate() {
+            var myTemplate = document.getElementById('myTemplate'),
+            normalContent = document.getElementById('yourThoughts'),
+            clonedTemplate = myTemplate.content.cloneNode(true);
+            normalContent.appendChild(clonedTemplate);
+            const woohoo = document.getElementById('woohoo');
+            woohoo.classList.add('hidden');
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
+/*reset*/
+:root{
+    background-color: #eeeeee;
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/*globals*/
+a{
+    text-decoration: none;
+    color: #55a5eb;
+}
+h1 {
+    font-size: 5rem;
+    color: #55a5eb;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+template{
+    display: flex;
+}
+
+/* utility classes for flex layout */
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.mb-4{
+    margin-bottom: 4rem;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+.wrapper > * {
+    width: 100%;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.hidden, .hidden-on-desktop{
+    display: none;
+}
+
+/* components */
+/* forms */
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin: 0 0 1rem 0;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input::placeholder{
+    color: #aaa;
+}
+/* btns */
+.btn{
+    width: 20rem;
+    border: 0.1rem solid #55a5eb;
+    background-color: #eeeeee;
+    color: #55a5eb;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.btn:hover{
+    background-color: #55a5eb;
+    color:#eeeeee;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(90, 190, 240, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+    cursor: pointer;
+}
+
+.btn[disabled]:hover{
+    box-shadow: none;
+    transform: none;
+    background-color: aliceblue;
+    color: rgba(90, 190, 240, 0.5);
+    cursor: not-allowed;
+}
+
+#giveUp{
+    width: 10rem;
+    font-size: 1rem;
+}
+
+#giveUp:hover{
+    background-color: crimson;
+}
+
+.card:hover{
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(90, 190, 240, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+    cursor: pointer;
+}
+
+/* Specifics */
+/* home */
+#mainTitle{
+    font-family: 'Raleway', sans-serif;
+}
+/* high scores */
+#scoreBoard{
+    padding-left: 0;
+    margin: 0 0 4rem 0;
+    list-style-type: none;
+}
+.high-score{
+    font-size: 1.5rem;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.high-score > span{
+    margin: 0 2rem 0 0;
+}
+
+.high-score:hover{
+    transform: scale(1.03);
+}
+
+/* about */
+.about{
+    font-size: 1.5rem;
+}
